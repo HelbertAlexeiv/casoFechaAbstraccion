@@ -1,9 +1,12 @@
 package modelo;
-
 public class FechaDetallada extends Fecha{
-    private String [] MESES = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "nomviembre", "diciembre"};
-    
 
+    //---Atributos---
+    //Array meses
+    private final String [] MESES = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "nomviembre", "diciembre"};
+
+
+    //---Metodos---
     public FechaDetallada(String fecha){
         super(fecha);
     }
@@ -14,7 +17,6 @@ public class FechaDetallada extends Fecha{
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return getDia() + "de " + MESES[getMes()-1] + " de " + getAnio();
+        return getDia() + " de " + MESES[getMes()-1] + " de " + getAnio();
     }
 }
